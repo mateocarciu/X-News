@@ -1,58 +1,58 @@
-# Projet X News
+# Project X News
 
-Bienvenue dans le projet X News, un bot Twitter automatisé qui récupère des informations depuis une API d'actualités et les publie sur un compte Twitter.
+Welcome to the Project X News, an automated Twitter bot that fetches information from a news API and posts it on a Twitter account.
 
-## Fonctionnalités
+## Features
 
-- Récupère les titres des articles récents via l'API **NewsAPI**.
-- Vérifie si un article a déjà été tweeté pour éviter les doublons.
-- Publie automatiquement des tweets avec les titres et les liens des articles.
-- Utilise Selenium pour automatiser la connexion et l'interaction avec Twitter.
+- Fetches recent article headlines via the **NewsAPI**.
+- Checks if an article has already been tweeted to avoid duplicates.
+- Automatically posts tweets with article titles and links.
+- Uses Selenium to automate login and interaction with Twitter.
 
 ## Installation
 
-1. Clonez le dépôt ou téléchargez le code source.
-2. Assurez-vous d'avoir Python installé sur votre machine.
-3. Installez les bibliothèques nécessaires à l'aide du fichier `requirements.txt` :
+1. Clone the repository or download the source code.
+2. Ensure Python is installed on your machine.
+3. Install the required libraries using the `requirements.txt` file:
    ```bash
    pip install -r requirements.txt
    ```
 
 ## Configuration
 
-1. **API NewsAPI** :
+1. **NewsAPI**:
 
-   - Créez un compte sur [NewsAPI](https://newsapi.org) pour obtenir une clé API. (Vous pouvez très bien utiliser une autre Api)
-   - Remplissez la variable `newsapi_api_key` avec votre clé API dans le script.
+   - Create an account on [NewsAPI](https://newsapi.org) to obtain an API key. (You can also use another API if preferred.)
+   - Fill the `newsapi_api_key` variable with your API key in the script.
 
-2. **Compte Twitter** :
+2. **Twitter Account**:
 
-   - Ajoutez vos identifiants Twitter (`username` et `password`) dans le script pour permettre la connexion automatisée.
+   - Add your Twitter credentials (`username` and `password`) in the script to enable automated login.
 
-3. **Fichier JSON pour les articles tweetés** :
-   - Le fichier `tweeted_articles.json` est utilisé pour enregistrer les articles déjà tweetés. Il sera automatiquement créé et mis à jour si inexistant.
+3. **JSON File for Tweeted Articles**:
+   - The `tweeted_articles.json` file is used to store already tweeted articles. It will be automatically created and updated if it doesn't exist.
 
-## Utilisation
+## Usage
 
-Exécutez le script pour lancer le bot :
+Run the script to start the bot:
 
 ```bash
 python twitter.py
 ```
 
-Le bot :
+The bot will:
 
-1. Se connectera à votre compte Twitter.
-2. Récupérera les articles récents.
-3. Publiera un tweet pour chaque nouvel article.
+1. Log in to your Twitter account.
+2. Fetch recent articles.
+3. Post a tweet for each new article.
 
 ## Notes
 
-- Le bot utilise un intervalle défini (`interval`) pour vérifier régulièrement les nouveaux articles. Vous pouvez modifier cette valeur dans le script.
+- The bot uses a defined interval (`interval`) to regularly check for new articles. You can modify this value in the script.
 
-## Prérequis
+## Prerequisites
 
-- **Google Chrome** installé.
-- **Chromedriver** compatible avec la version de votre navigateur. Le gestionnaire de pilotes (`webdriver-manager`) s'en charge automatiquement.
+- **Google Chrome** installed.
+- **Chromedriver** compatible with your browser version. The driver manager (`webdriver-manager`) handles this automatically.
 
 ---
